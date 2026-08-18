@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>La compagnie du 20 ème</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- ==============================
+         HEADER
+    =============================== -->
+
+    <header>
+
+        <div class="logo">
+            <img
+                src="images/logo.png"
+                alt="Logo de La Compagnie du 20ème"
+                class="petit-logo"
+            >
+
+            <h1>La Compagnie du 20ème</h1>
+        </div>
+
+        <!-- Bouton trois traits -->
+<div class="menu-btn" onclick="toggleMenu()"><span id="menu-icon">☰ </span></div>
+
+<div class="menu-overlay" onclick="closeMenu()"></div>
+
+<nav id="menu">
+
+    <div class="menu-logo">
+        <img src="images/logo.png" alt="Logo de La Compagnie du 20ème">
+    </div>
+
+    <ul>
+    <li>
+        <a href="index.html" class="active-link" onclick="closeMenu()">Accueil</a>
+    </li>
+
+    <li>
+        <a href="association.html" onclick="closeMenu()">L'association</a>
+    </li>
+
+    <li>
+        <a href="actions.html" onclick="closeMenu()">Nos actions</a>
+    </li>
+
+    <li>
+        <a href="actualites.html" onclick="closeMenu()">Actualités</a>
+    </li>
+
+    <li>
+        <a href="contact.html" onclick="closeMenu()">Contact</a>
+    </li>
+</ul>
+
+</nav>
+
+    </header>
+
+
+    <!-- ==============================
+         ACCUEIL
+    =============================== -->
+
+    <main>
+
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <h2>
+                    La Compagnie du 20ème
+                </h2>
+
+                <p>
+                    Une association engagée au service
+                    de la solidarité, du partage et du vivre ensemble.
+                </p>
+
+                <a href="association.html" class="btn">
+                    Découvrir l'association
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==============================
+             PRÉSENTATION
+        =============================== -->
+
+        <section class="presentation">
+
+            <h2>
+                Bienvenue à La Compagnie du 20ème
+            </h2>
+
+            <p>
+                La Compagnie du 20ème est une association qui
+                rassemble des personnes autour de projets
+                solidaires, culturels et citoyens.
+            </p>
+
+            <p>
+                Notre objectif est de favoriser les rencontres,
+                l'entraide et le lien social à travers différentes
+                actions et activités.
+            </p>
+
+            <a href="association.html" class="btn">
+                En savoir plus
+            </a>
+
+        </section>
+
+
+<!-- ==============================
+     NOS ACTIONS
+============================== -->
+<section class="actions">
+   <h2>
+
+        Nos actions
+    </h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <div class="card-content">
+                <h3>
+                    Solidarité
+                </h3>
+
+                <p>
+                    Des actions destinées à favoriser
+                    l'entraide et accompagner les personnes
+                    qui en ont besoin.
+                </p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-content">
+                <h3>
+                    Culture
+                </h3>
+
+                <p>
+                    Des activités et événements permettant
+                    de découvrir, partager et transmettre
+                    la culture.
+                </p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-content">
+                <h3>
+                    Vie sociale
+                </h3>
+
+                <p>
+                    Des initiatives pour créer du lien,
+                    favoriser les rencontres et renforcer
+                    le vivre ensemble.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+<p style="display:block !important; color:#1b5e20 !important; font-size:20px !important; margin-top:30px !important;">
+    DÉCOUVRIR TOUTES NOS ACTIONS
+</p>
+
+</section>
+
+        <!-- ==============================
+             ACTUALITÉS
+        =============================== -->
+
+        <section class="actualites">
+
+            <h2>
+                Actualités
+            </h2>
+
+            <div class="news">
+
+                <h3>
+                    Découvrez nos prochaines actualités
+                </h3>
+
+                <p>
+                    Retrouvez ici les événements, activités
+                    et informations de La Compagnie du 20ème.
+                </p>
+
+                <a href="actualites.html" class="btn">
+                    Voir toutes les actualités
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==============================
+             CONTACT
+        =============================== -->
+
+        <section class="contact">
+
+            <h2>
+                Nous contacter
+            </h2>
+
+            <p>
+                Vous souhaitez en savoir plus sur nos activités
+                ou participer à la vie de l'association ?
+            </p>
+
+            <a href="contact.html" class="btn">
+                Contactez-nous
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <!-- ==============================
+         FOOTER
+    =============================== -->
+
+    <footer>
+
+        <p>
+            © 2026 La Compagnie du 20ème -
+            Tous droits réservés
+        </p>
+
+    </footer>
+
+
+    <!-- ==============================
+         JAVASCRIPT DU MENU
+    =============================== -->
+
+
+<script>
+function toggleMenu() {
+
+    const menu = document.getElementById("menu");
+    const overlay = document.querySelector(".menu-overlay");
+    const icon = document.getElementById("menu-icon");
+
+    menu.classList.toggle("active");
+    overlay.classList.toggle("active");
+
+    if (menu.classList.contains("active")) {
+        icon.textContent = "✕";
+    } else {
+        icon.textContent = "☰";
+    }
+}
+
+function closeMenu() {
+
+    document.getElementById("menu").classList.remove("active");
+    document.querySelector(".menu-overlay").classList.remove("active");
+
+    document.getElementById("menu-icon").textContent = "☰";
+}
+</script>
+
+</body>
+
+</html>
+

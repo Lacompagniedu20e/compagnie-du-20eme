@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>La vie de l'association - La Compagnie du 20ème</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header>
+
+        <div class="logo">
+            <img
+                src="images/logo.png"
+                alt="Logo de La Compagnie du 20ème"
+                class="petit-logo"
+            >
+
+            <h1>La Compagnie du 20ème</h1>
+        </div>
+
+        <div class="menu-btn" onclick="toggleMenu()">
+            <span id="menu-icon">☰</span>
+        </div>
+
+        <div
+            class="menu-overlay"
+            onclick="closeMenu()">
+        </div>
+
+        <nav id="menu">
+
+            <div class="menu-logo">
+                <img
+                    src="images/logo.png"
+                    alt="Logo de La Compagnie du 20ème"
+                >
+            </div>
+
+            <ul>
+
+                <li>
+                    <a href="index.html">
+                        Accueil
+                    </a>
+                </li>
+
+                <li>
+                    <a href="association.html">
+                        L'association
+                    </a>
+                </li>
+
+                <li>
+                    <a href="actions.html">
+                        Nos actions
+                    </a>
+                </li>
+
+                <li>
+                    <a
+                        href="actualites.html"
+                        class="active-link">
+                        Actualités
+                    </a>
+                </li>
+
+                <li>
+                    <a href="contact.html">
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <article class="article">
+
+            <h2>
+                La vie de l'association
+            </h2>
+
+            <p class="article-date">
+                La Compagnie du 20ème
+            </p>
+
+            <img
+                src="images/actualite3.jpg"
+                alt="La vie de La Compagnie du 20ème"
+                class="article-image"
+            >
+
+            <div class="article-content">
+
+                <p>
+    La Compagnie du 20ème est une association engagée
+    dans la vie locale et dans la création de liens entre
+    les habitants.
+</p>
+
+<p>
+    L'association développe des projets et des activités
+    autour de la solidarité, du partage, de la culture et
+    de la participation à la vie du quartier.
+</p>
+
+<p>
+    Ces initiatives permettent aux habitants de se rencontrer,
+    d'échanger leurs expériences et de participer ensemble
+    à des projets collectifs.
+</p>
+
+<p>
+    La Compagnie du 20ème souhaite poursuivre cette dynamique
+    et construire de nouveaux projets avec les habitants et
+    les acteurs locaux.
+</p>
+
+
+            </div>
+
+            <a
+                href="actualites.html"
+                class="btn">
+                ← Retour aux actualités
+            </a>
+
+        </article>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            © 2026 La Compagnie du 20ème -
+            Tous droits réservés
+        </p>
+
+    </footer>
+
+
+    <script>
+
+        function toggleMenu() {
+
+            const menu =
+                document.getElementById("menu");
+
+            const overlay =
+                document.querySelector(".menu-overlay");
+
+            const icon =
+                document.getElementById("menu-icon");
+
+            menu.classList.toggle("active");
+
+            overlay.classList.toggle("active");
+
+            if (menu.classList.contains("active")) {
+                icon.textContent = "✕";
+            } else {
+                icon.textContent = "☰";
+            }
+        }
+
+
+        function closeMenu() {
+
+            document
+                .getElementById("menu")
+                .classList.remove("active");
+
+            document
+                .querySelector(".menu-overlay")
+                .classList.remove("active");
+
+            document
+                .getElementById("menu-icon")
+                .textContent = "☰";
+        }
+
+    </script>
+
+</body>
+
+</html>
+

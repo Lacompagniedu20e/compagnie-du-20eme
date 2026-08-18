@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Le Café des Liens - La Compagnie du 20ème</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header>
+
+        <div class="logo">
+            <img
+                src="images/logo.png"
+                alt="Logo de La Compagnie du 20ème"
+                class="petit-logo"
+            >
+
+            <h1>La Compagnie du 20ème</h1>
+        </div>
+
+        <div class="menu-btn" onclick="toggleMenu()">
+            <span id="menu-icon">☰</span>
+        </div>
+
+        <div
+            class="menu-overlay"
+            onclick="closeMenu()">
+        </div>
+
+        <nav id="menu">
+
+            <div class="menu-logo">
+                <img
+                    src="images/logo.png"
+                    alt="Logo de La Compagnie du 20ème"
+                >
+            </div>
+
+            <ul>
+
+                <li>
+                    <a href="index.html">
+                        Accueil
+                    </a>
+                </li>
+
+                <li>
+                    <a href="association.html">
+                        L'association
+                    </a>
+                </li>
+
+                <li>
+                    <a href="actions.html">
+                        Nos actions
+                    </a>
+                </li>
+
+                <li>
+                    <a
+                        href="actualites.html"
+                        class="active-link">
+                        Actualités
+                    </a>
+                </li>
+
+                <li>
+                    <a href="contact.html">
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <article class="article">
+
+            <h2>
+                Le Café des Liens : un espace de solidarité et de convivialité
+            </h2>
+
+            <p class="article-date">
+                La Compagnie du 20ème
+            </p>
+
+            <img
+                src="images/actualite4.jpg"
+                alt="Le Café des Liens"
+                class="article-image"
+            >
+
+            <div class="article-content">
+
+                <p>
+                    Le Café des Liens est un espace de solidarité
+                    et de convivialité proposé par La Compagnie du 20ème
+                    dans le 20e arrondissement de Paris.
+                </p>
+
+                <p>
+                    Ce lieu accueille notamment les personnes de plus
+                    de 60 ans du quartier et favorise les rencontres,
+                    les échanges et la création de liens sociaux.
+                </p>
+
+                <p>
+                    Des activités collectives et des accompagnements
+                    individuels permettent aux participants de partager
+                    des moments conviviaux et de lutter contre l'isolement.
+                </p>
+
+                <p>
+                    Le Café des Liens s'inscrit dans une démarche
+                    de solidarité et de participation à la vie locale.
+                </p>
+
+            </div>
+
+            <a
+                href="actualites.html"
+                class="btn">
+                ← Retour aux actualités
+            </a>
+
+        </article>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            © 2026 La Compagnie du 20ème -
+            Tous droits réservés
+        </p>
+
+    </footer>
+
+
+    <script>
+
+        function toggleMenu() {
+
+            const menu =
+                document.getElementById("menu");
+
+            const overlay =
+                document.querySelector(".menu-overlay");
+
+            const icon =
+                document.getElementById("menu-icon");
+
+            menu.classList.toggle("active");
+
+            overlay.classList.toggle("active");
+
+            if (menu.classList.contains("active")) {
+
+                icon.textContent = "✕";
+
+            } else {
+
+                icon.textContent = "☰";
+
+            }
+        }
+
+
+        function closeMenu() {
+
+            document
+                .getElementById("menu")
+                .classList.remove("active");
+
+            document
+                .querySelector(".menu-overlay")
+                .classList.remove("active");
+
+            document
+                .getElementById("menu-icon")
+                .textContent = "☰";
+        }
+
+    </script>
+
+</body>
+
+</html>
+
+

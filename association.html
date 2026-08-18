@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>L'association - La Compagnie du 20ème</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- ==============================
+         HEADER
+    =============================== -->
+
+    <header>
+
+        <div class="logo">
+            <img
+                src="images/logo.png"
+                alt="Logo de La Compagnie du 20ème"
+                class="petit-logo"
+            >
+
+            <h1>La Compagnie du 20ème</h1>
+        </div>
+
+
+        <!-- Bouton menu -->
+
+        <div class="menu-btn" onclick="toggleMenu()">
+            <span id="menu-icon">☰</span>
+        </div>
+
+
+        <!-- Fond derrière le menu -->
+
+        <div
+            class="menu-overlay"
+            onclick="closeMenu()">
+        </div>
+
+
+        <!-- Menu -->
+
+        <nav id="menu">
+
+            <div class="menu-logo">
+                <img
+                    src="images/logo.png"
+                    alt="Logo de La Compagnie du 20ème"
+                >
+            </div>
+
+            <ul>
+
+                <li>
+                    <a href="index.html">
+                        Accueil
+                    </a>
+                </li>
+
+                <li>
+                    <a
+                        href="association.html"
+                        class="active-link">
+                        L'association
+                    </a>
+                </li>
+
+                <li>
+                    <a href="actions.html">
+                        Nos actions
+                    </a>
+                </li>
+
+                <li>
+                    <a href="actualites.html">
+                        Actualités
+                    </a>
+                </li>
+
+                <li>
+                    <a href="contact.html">
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ==============================
+         CONTENU
+    ============================== -->
+
+    <main>
+
+        <section class="presentation">
+
+            <h2>
+                L'association
+            </h2>
+
+            <img
+                src="images/association.jpg"
+                alt="La Compagnie du 20ème"
+                class="image-presentation"
+            >
+
+            <p>
+                La Compagnie du 20ème est une association
+                engagée dans la création de lien social,
+                la solidarité et le partage.
+            </p>
+
+            <p>
+                Elle rassemble des personnes autour de projets
+                et d'activités destinés à favoriser les rencontres,
+                l'entraide et le vivre ensemble.
+            </p>
+
+            <p>
+                À travers ses différentes initiatives,
+                l'association souhaite contribuer à une vie
+                locale dynamique, solidaire et ouverte à tous.
+            </p>
+
+
+            <!-- ==============================
+                 NOS VALEURS
+            ============================== -->
+
+            <div class="valeurs">
+
+                <h3>
+                    Nos valeurs
+                </h3>
+
+                <ul>
+
+                    <li>
+                        🤝 Solidarité et entraide
+                    </li>
+
+                    <li>
+                        ❤️ Respect et bienveillance
+                    </li>
+
+                    <li>
+                        🌍 Ouverture et diversité
+                    </li>
+
+                    <li>
+                        👥 Partage et convivialité
+                    </li>
+
+                    <li>
+                        🌱 Engagement citoyen
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ==============================
+         FOOTER
+    ============================== -->
+
+    <footer>
+
+        <p>
+            © 2026 La Compagnie du 20ème -
+            Tous droits réservés
+        </p>
+
+    </footer>
+
+
+    <!-- ==============================
+         JAVASCRIPT
+    ============================== -->
+
+    <script>
+
+        function toggleMenu() {
+
+            const menu =
+                document.getElementById("menu");
+
+            const overlay =
+                document.querySelector(".menu-overlay");
+
+            const icon =
+                document.getElementById("menu-icon");
+
+
+            menu.classList.toggle("active");
+
+            overlay.classList.toggle("active");
+
+
+            if (menu.classList.contains("active")) {
+
+                icon.textContent = "✕";
+
+            } else {
+
+                icon.textContent = "☰";
+
+            }
+
+        }
+
+
+        function closeMenu() {
+
+            document
+                .getElementById("menu")
+                .classList.remove("active");
+
+            document
+                .querySelector(".menu-overlay")
+                .classList.remove("active");
+
+            document
+                .getElementById("menu-icon")
+                .textContent = "☰";
+
+        }
+
+    </script>
+
+</body>
+
+</html>
