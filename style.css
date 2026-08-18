@@ -1,0 +1,2032 @@
+/* =========================================
+   RÉINITIALISATION
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    color: #333;
+    line-height: 1.6;
+    background: white;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 5px 8%;
+
+    background: white;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 1000;
+
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo h1 {
+    font-size: 24px;
+    color: #1b5e20;
+}
+
+.petit-logo {
+    width: 80px;
+    height: auto;
+    display: block;
+}
+
+
+/* =========================================
+   NAVIGATION ORDINATEUR
+========================================= */
+
+nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+nav a:hover {
+    color: #1b5e20;
+}
+
+
+/* =========================================
+   BOUTON MENU
+========================================= */
+
+.menu-btn {
+    display: none;
+
+    position: fixed;
+    top: 15px;
+    right: 8%;
+
+    width: 45px;
+    height: 45px;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 32px;
+    color: #1b5e20;
+
+    background: white;
+
+    cursor: pointer;
+
+    z-index: 4000;
+}
+
+#menu-icon {
+    display: inline-block;
+    font-size: 32px;
+    line-height: 1;
+}
+
+
+/* =========================================
+   ACCUEIL / HERO
+========================================= */
+
+.hero {
+    height: 500px;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+        ),
+        url("../images/accueil.jpg");
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    color: white;
+}
+
+.hero-content {
+    max-width: 700px;
+    padding: 20px;
+}
+
+.hero h2 {
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+}
+
+
+/* =========================================
+   BOUTONS
+========================================= */
+
+.btn {
+    display: inline-block;
+
+    margin-top: 20px;
+
+    padding: 12px 25px;
+
+    background: #1b5e20;
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 30px;
+
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+
+/* =========================================
+   SECTIONS
+========================================= */
+
+section {
+    padding: 60px 8%;
+    text-align: center;
+
+    opacity: 1;
+    transform: translateY(0);
+
+    transition: 0.8s ease;
+}
+
+section h2 {
+    margin-bottom: 30px;
+    font-size: 32px;
+}
+
+
+/* =========================================
+   PRÉSENTATION
+========================================= */
+
+.presentation {
+    max-width: 1000px;
+
+    margin: auto;
+
+    padding: 80px 8%;
+
+    text-align: center;
+
+    background: #f5f5f5;
+}
+
+.presentation p {
+    max-width: 800px;
+
+    margin: auto;
+    margin-bottom: 20px;
+
+    font-size: 18px;
+}
+
+
+/* =========================================
+   IMAGE DE PRÉSENTATION
+========================================= */
+
+image-presentation {
+    width: 100%;
+    max-width: 650px;
+    height: auto;
+    object-fit: contain;
+    border-radius: 15px;
+    display: block;
+    margin:0 auto 30px auto;
+}
+
+
+/* =========================================
+   VALEURS
+========================================= */
+
+.valeurs {
+    margin-top: 40px;
+
+    background: #f5f5f5;
+
+    padding: 30px;
+
+    border-radius: 15px;
+}
+
+.valeurs h3 {
+    color: #1b5e20;
+    margin-bottom: 20px;
+}
+
+.valeurs ul {
+    list-style: none;
+    padding: 0;
+}
+
+.valeurs li {
+    margin: 15px;
+
+    font-size: 18px;
+}
+
+
+/* =========================================
+   CARTES
+========================================= */
+
+.cards {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 25px;
+
+    align-items: stretch;
+
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 350px;
+
+    background: white;
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.15);
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+/* =========================================
+   IMAGE DES CARTES
+========================================= */
+
+.card img {
+    width: 100%;
+
+    height: 220px;
+
+    object-fit: cover;
+
+    display: block;
+
+    border-radius: 15px 15px 0 0;
+}
+
+
+/* =========================================
+   CONTENU DES CARTES
+========================================= */
+
+.card-content {
+    padding: 20px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    flex: 1;
+}
+
+.card-content h3 {
+    margin: 10px 0;
+}
+
+.card-content p {
+    margin-bottom: 10px;
+}
+
+.card span {
+    color: #1b5e20;
+
+    font-size: 14px;
+}
+
+
+/* Bouton toujours en bas */
+
+.card .btn {
+    margin-top: auto;
+
+    align-self: flex-start;
+}
+
+
+/* =========================================
+   ACTIONS
+========================================= */
+
+.actions {
+    padding: 60px 8%;
+
+    text-align: center;
+}
+
+.actions .cards {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 25px;
+
+    flex-wrap: wrap;
+}
+
+.actions .card {
+    width: 300px;
+
+    padding: 30px;
+}
+
+.actions .card h3 {
+    color: #1b5e20;
+
+    margin-bottom: 15px;
+}
+
+
+/* =========================================
+   ACTUALITÉS
+========================================= */
+
+.actualites {
+    padding: 60px 8%;
+
+    text-align: center;
+}
+
+.news {
+    max-width: 800px;
+
+    margin: auto;
+
+    padding: 30px;
+
+    background: #f5f5f5;
+
+    border-radius: 15px;
+}
+
+
+/* =========================================
+   CONTACT
+========================================= */
+
+.contact {
+    padding: 60px 8%;
+
+    text-align: center;
+}
+
+.contact p {
+    max-width: 800px;
+
+    margin: auto;
+
+    font-size: 18px;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+    background: #222;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 25px;
+}
+
+
+/* =========================================
+   MENU COULISSANT
+========================================= */
+
+nav {
+    position: fixed !important;
+
+    top: 0;
+
+    left: -280px !important;
+
+    width: 280px;
+
+    height: 100vh;
+
+    background: white;
+
+    padding: 90px 25px 30px;
+
+    box-shadow:
+        4px 0 15px rgba(0, 0, 0, 0.15);
+
+    transition:
+        left 0.35s ease-in-out;
+
+    z-index: 3000;
+}
+
+nav.active {
+    display: block !important;
+
+    left: 0 !important;
+}
+
+
+/* =========================================
+   LOGO DANS LE MENU
+========================================= */
+
+.menu-logo {
+    text-align: center;
+
+    margin-bottom: 30px;
+}
+
+.menu-logo img {
+    width: 110px;
+
+    height: auto;
+}
+
+
+/* =========================================
+   LIENS DU MENU
+========================================= */
+
+nav ul {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 0;
+
+    list-style: none;
+
+    padding: 0;
+}
+
+nav li {
+    border-bottom: 1px solid #eeeeee;
+}
+
+nav li a {
+    display: block;
+
+    padding: 15px 8px;
+
+    color: #333;
+
+    text-decoration: none;
+
+    font-size: 17px;
+
+    font-weight: 500;
+
+    transition: 0.3s ease;
+}
+
+nav li a:hover {
+    color: #1b5e20;
+
+    background: #f5f5f5;
+
+    padding-left: 15px;
+}
+
+
+/* =========================================
+   LIEN ACTIF
+========================================= */
+
+nav li a.active-link {
+    color: #1b5e20;
+
+    font-weight: bold;
+
+    border-left: 4px solid #1b5e20;
+
+    padding-left: 12px;
+
+    background: #f5f5f5;
+}
+
+
+/* =========================================
+   FOND SOMBRE DERRIÈRE LE MENU
+========================================= */
+
+.menu-overlay {
+    display: none;
+
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.35);
+
+    opacity: 0;
+
+    transition: opacity 0.35s ease;
+
+    z-index: 2999;
+}
+
+.menu-overlay.active {
+    display: block;
+
+    opacity: 1;
+}
+
+
+/* =========================================
+   VERSION TÉLÉPHONE
+========================================= */
+
+@media (max-width: 768px) {
+
+    header {
+        padding: 8px 5%;
+
+        flex-direction: row;
+    }
+
+    .petit-logo {
+        width: 65px;
+    }
+
+    .logo h1 {
+        font-size: 18px;
+    }
+
+    /* Bouton ☰ / ✕ */
+
+    .menu-btn {
+        display: flex !important;
+    }
+
+    /* Menu */
+
+    nav {
+        width: 280px;
+    }
+
+    /* Hero */
+
+    .hero {
+        height: 450px;
+    }
+
+    .hero h2 {
+        font-size: 30px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    /* Cartes */
+
+    .cards {
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+    .card {
+        width: 100%;
+
+        max-width: 400px;
+    }
+
+    /* Sections */
+
+    section {
+        padding: 50px 5%;
+    }
+
+    section h2 {
+        font-size: 28px;
+    }
+
+    /* Présentation */
+
+    .presentation {
+        padding: 60px 5%;
+    }
+
+    .presentation p {
+        font-size: 16px;
+    }
+}
+
+/* =====================================
+   MENU SUR TOUS LES ÉCRANS
+===================================== */
+
+.menu-btn {
+    display: flex !important;
+
+    position: fixed;
+    top: 15px;
+    right: 8%;
+
+    width: 45px;
+    height: 45px;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 32px;
+    color: #1b5e20;
+
+    background: white;
+
+    cursor: pointer;
+
+    z-index: 4000;
+}
+
+#menu-icon {
+    display: inline-block !important;
+    font-size: 32px;
+    line-height: 1;
+}
+
+nav {
+    position: fixed !important;
+
+    top: 0;
+    left: -280px !important;
+
+    width: 280px;
+    height: 100vh;
+
+    background: white;
+
+    padding: 90px 25px 30px;
+
+    box-shadow: 4px 0 15px rgba(0, 0, 0, 0.15);
+
+    transition: left 0.35s ease-in-out;
+
+    z-index: 3000;
+}
+
+nav.active {
+    left: 0 !important;
+}
+html,
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+/* Correction de l'image de la page Association */
+
+.presentation {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 60px 5%;
+}
+
+.image-presentation {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto 30px auto;
+    object-fit: contain;
+    border-radius: 15px;
+}
+/* =====================================
+   PRÉSENTATION ASSOCIATION
+===================================== */
+
+.presentation h2 {
+    color: #1b5e20;
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.presentation p {
+    max-width: 800px;
+    margin: 0 auto 20px auto;
+    font-size: 18px;
+    line-height: 1.8;
+}
+/* =====================================
+   NOS VALEURS
+===================================== */
+
+.valeurs {
+    max-width: 800px;
+    margin: 50px auto 0 auto;
+
+    background: white;
+
+    padding: 35px;
+
+    border-radius: 18px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.10);
+}
+
+.valeurs h3 {
+    color: #1b5e20;
+
+    font-size: 28px;
+
+    margin-bottom: 25px;
+}
+
+.valeurs ul {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 15px;
+
+    list-style: none;
+
+    padding: 0;
+}
+
+.valeurs li {
+    margin: 0;
+
+    padding: 15px;
+
+    background: #f5f5f5;
+
+    border-radius: 10px;
+
+    font-size: 17px;
+
+    transition: 0.3s ease;
+}
+
+.valeurs li:hover {
+    background: #e8f5e9;
+
+    transform: translateY(-2px);
+}
+@media (max-width: 768px) {
+
+    .valeurs {
+        padding: 25px 15px;
+        margin-top: 40px;
+    }
+
+    .valeurs h3 {
+        font-size: 25px;
+    }
+
+    .valeurs ul {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .valeurs li {
+        font-size: 16px;
+        padding: 14px;
+    }
+
+}
+
+.intro-actualites {
+    max-width: 750px;
+    margin: -10px auto 40px auto;
+    font-size: 18px;
+    line-height: 1.7;
+}
+/* Image des articles */
+
+.article-image {
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    margin: 0 auto 30px auto;
+    border-radius: 15px;
+}
+/* =====================================
+   PAGE ARTICLE
+===================================== */
+
+.article {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 70px 5%;
+    text-align: center;
+}
+
+.article h2 {
+    color: #1b5e20;
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.article-date {
+    color: #777;
+    font-size: 15px;
+    margin-bottom: 30px;
+}
+
+.article-content {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: justify;
+}
+
+.article-content p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+/* =====================================
+   PAGE NOS ACTIONS
+===================================== */
+
+.actions {
+    display: block;
+    width: 100%;
+    padding: 60px 5%;
+    text-align: center;
+    opacity: 1;
+    visibility: visible;
+}
+
+.actions h2 {
+    color: #1b5e20;
+    font-size: 36px;
+    margin-bottom: 25px;
+}
+
+.intro-actions {
+    max-width: 750px;
+    margin: 0 auto 40px auto;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.actions .cards {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.actions .card {
+    width: 300px;
+    padding: 30px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.action-icon {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.actions .card h3 {
+    color: #1b5e20;
+    font-size: 23px;
+    margin-bottom: 15px;
+}
+
+.actions .card p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+/* =====================================
+   PAGE CONTACT
+===================================== */
+
+.contact-info {
+    max-width: 900px;
+    margin: 40px auto 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.contact-item {
+    width: 260px;
+    padding: 30px 20px;
+    background: #f5f5f5;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.10);
+}
+
+.contact-item h3 {
+    color: #1b5e20;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.contact-item p {
+    font-size: 16px;
+}
+
+/* =====================================
+   BOUTON NOS ACTIONS - ACCUEIL
+===================================== */
+.actions > .btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 12px 25px;
+    background: #1b5e20;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    visibility: visible;
+    opacity: 1;
+}
+/* =====================================
+   AMÉLIORATION DES CARTES NOS ACTIONS
+===================================== */
+
+.actions .card {
+    min-height: 300px;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.actions .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.18);
+}
+
+.action-icon {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.actions .card h3 {
+    margin-bottom: 15px;
+}
+
+.actions .card p {
+    max-width: 250px;
+    margin: 0 auto;
+    text-align: justify;
+    line-height: 1.7;
+}
+
+/* Adaptation téléphone */
+
+@media (max-width: 768px) {
+
+    .actions .card {
+        width: 100%;
+        max-width: 400px;
+        min-height: auto;
+        padding: 30px 25px;
+    }
+
+    .action-icon {
+        font-size: 45px;
+    }
+
+}
+/* =====================================
+   NOTRE ENGAGEMENT
+===================================== */
+
+.engagement-actions {
+    max-width: 800px;
+    margin: 60px auto 0 auto;
+    padding: 35px;
+    background: #f5f5f5;
+    border-radius: 18px;
+    text-align: center;
+}
+
+.engagement-actions h3 {
+    color: #1b5e20;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.engagement-actions p {
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.engagement-actions p:last-child {
+    margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+
+    .engagement-actions {
+        padding: 25px 20px;
+        margin-top: 40px;
+    }
+
+    .engagement-actions h3 {
+        font-size: 25px;
+    }
+
+    .engagement-actions p {
+        font-size: 16px;
+    }
+
+}
+
+/* =====================================
+   NOTRE ENGAGEMENT
+===================================== */
+
+.engagement-actions {
+    display: block;
+    width: 100%;
+    max-width: 800px;
+    margin: 60px auto 0 auto;
+    padding: 35px;
+    background: #f5f5f5;
+    border-radius: 18px;
+    text-align: center;
+    opacity: 1;
+    visibility: visible;
+}
+
+.engagement-actions h3 {
+    color: #1b5e20;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.engagement-actions p {
+    color: #333;
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.engagement-actions p:last-child {
+    margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+
+    .engagement-actions {
+        width: 100%;
+        margin-top: 40px;
+        padding: 25px 20px;
+    }
+
+    .engagement-actions h3 {
+        font-size: 25px;
+    }
+
+    .engagement-actions p {
+        font-size: 16px;
+    }
+}
+/* =====================================
+   NOTRE ENGAGEMENT - DESIGN
+===================================== */
+
+/* =====================================
+   NOTRE ENGAGEMENT
+===================================== */
+
+.engagement-actions {
+    width: 100%;
+    max-width: none;
+    margin: 60px auto 0 auto;
+    padding: 40px 50px;
+
+    background: white;
+    border-radius: 15px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+
+    text-align: center;
+}
+
+.engagement-actions h3 {
+    color: #1b5e20;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.engagement-actions p {
+    max-width: 800px;
+    margin: 0 auto 18px auto;
+    font-size: 17px;
+    line-height: 1.8;
+    color: #444;
+}
+
+
+/* =====================================
+   TÉLÉPHONE
+===================================== */
+
+@media (max-width: 768px) {
+
+    .engagement-actions {
+        width: 100%;
+        max-width: 400px;
+        margin: 45px auto 0 auto;
+        padding: 30px 20px;
+    }
+
+    .engagement-actions h3 {
+        font-size: 26px;
+    }
+
+    .engagement-actions p {
+        font-size: 16px;
+        line-height: 1.7;
+    }
+}
+
+.engagement-actions {
+    width: 100%;
+    max-width: none;
+    margin: 30px auto 0 auto;
+    padding: 40px 50px;
+
+    background: white;
+    border-radius: 15px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+
+    text-align: center;
+}
+/* Ajustement de Notre engagement sur PC */
+@media (min-width: 769px) {
+    .engagement-actions {
+        width: 100%;
+        max-width: 100%;
+        margin-top: 20px;
+    }
+}
+
+/* =====================================
+   NOTRE ENGAGEMENT - VERSION PC
+===================================== */
+
+@media (min-width: 769px) {
+
+    .engagement-actions {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        margin: 25px auto 0 auto;
+        padding: 35px 50px;
+
+        background: white;
+        border-radius: 15px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+
+        text-align: center;
+    }
+
+    .engagement-actions h3 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .engagement-actions p {
+        max-width: 850px;
+        margin: 0 auto 18px auto;
+        text-align: center;
+    }
+}
+
+@media (min-width: 769px) {
+
+    .engagement-actions {
+        width: calc(100% + 10%);
+        max-width: none;
+        margin-left: -5%;
+        margin-right: -5%;
+        margin-top: 25px;
+        padding: 40px 8%;
+    }
+
+}
+
+/* =====================================
+   ACTUALITÉS - CARTES
+===================================== */
+
+.actualites .cards {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px;
+    max-width: 1100px;
+    margin: 40px auto 0 auto;
+}
+
+.actualites .card {
+    width: 100%;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+    display: flex;
+    flex-direction: column;
+}
+
+.actualites .card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.actualites .card-content {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    text-align: left;
+}
+
+.actualites .card-content span {
+    color: #1b5e20;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.actualites .card-content h3 {
+    font-size: 23px;
+    margin: 5px 0 12px 0;
+}
+
+.actualites .card-content p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.actualites .card-content .btn {
+    align-self: flex-start;
+    margin-top: auto;
+}
+
+
+/* =====================================
+   ACTUALITÉS - TÉLÉPHONE
+===================================== */
+
+@media (max-width: 768px) {
+
+    .actualites .cards {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        margin-top: 30px;
+    }
+
+    .actualites .card img {
+        height: 210px;
+    }
+
+    .actualites .card-content {
+        padding: 20px;
+    }
+
+    .actualites .card-content h3 {
+        font-size: 21px;
+    }
+}
+
+/* =====================================
+   ACTUALITÉS - AFFICHAGE TÉLÉPHONE
+===================================== */
+
+@media (max-width: 768px) {
+
+    .actualites .cards {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        width: 100%;
+        gap: 25px;
+    }
+
+    .actualites .card {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+}
+/* CARTES ACTUALITÉS */
+
+.actualites-cards {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 30px !important;
+    width: 100% !important;
+    max-width: 1100px !important;
+    margin: 40px auto 0 auto !important;
+}
+
+.actualites-cards .card {
+    width: 100% !important;
+    max-width: none !important;
+}
+
+/* TÉLÉPHONE */
+
+@media (max-width: 768px) {
+    .actualites-cards {
+        grid-template-columns: 1fr !important;
+        gap: 25px !important;
+    }
+
+    .actualites-cards .card {
+        width: 100% !important;
+    }
+}
+/* =====================================
+   ACTUALITÉS - MISE EN PAGE
+===================================== */
+
+.actualites-cards {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 30px !important;
+    width: 100% !important;
+    max-width: 1100px !important;
+    margin: 40px auto 0 auto !important;
+}
+
+.actualites-cards .card {
+    width: 100% !important;
+    max-width: none !important;
+}
+
+
+/* =====================================
+   ACTUALITÉS - TÉLÉPHONE
+===================================== */
+
+@media screen and (max-width: 1000px) {
+
+    .actualites-cards {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 25px !important;
+    }
+
+    .actualites-cards .card {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+}
+/* =====================================
+   AMÉLIORATION DES CARTES ACTUALITÉS
+===================================== */
+
+.actualites-cards .card {
+    overflow: hidden;
+    border-radius: 15px;
+    background: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.actualites-cards .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+}
+
+.actualites-cards .card img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    display: block;
+}
+
+.actualites-cards .card-content {
+    padding: 25px;
+}
+
+.actualites-cards .card-content span {
+    color: #777;
+    font-size: 14px;
+}
+
+.actualites-cards .card-content h3 {
+    color: #1b5e20;
+    font-size: 22px;
+    margin: 10px 0 15px;
+}
+
+.actualites-cards .card-content p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+/* =====================================
+   BOUTONS DES CARTES ACTUALITÉS
+===================================== */
+
+.actualites-cards .card-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.actualites-cards .card-content .btn {
+    margin-top: auto;
+    align-self: flex-start;
+}
+
+/* =====================================
+   TITRE ET INTRODUCTION ACTUALITÉS
+===================================== */
+
+.actualites > h2 {
+    color: #1b5e20;
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.actualites .intro-actualites {
+    max-width: 750px;
+    margin: 0 auto 40px auto;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+/* Téléphone */
+@media screen and (max-width: 768px) {
+
+    .actualites > h2 {
+        font-size: 30px;
+    }
+
+    .actualites .intro-actualites {
+        font-size: 16px;
+        padding: 0 10px;
+    }
+
+}
+
+/* =====================================
+   DATES DES ACTUALITÉS
+===================================== */
+
+.actualites-cards .card-content > span {
+    display: block;
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 8px;
+    font-style: italic;
+}
+
+/* =====================================
+   BOUTONS "LIRE LA SUITE"
+===================================== */
+
+.actualites-cards .btn {
+    background: #1b5e20;
+    color: white;
+    padding: 11px 22px;
+    border-radius: 25px;
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.actualites-cards .btn:hover {
+    background: #2e7d32;
+    transform: translateY(-2px);
+}
+
+/* =====================================
+   PAGE ARTICLE - TITRE
+===================================== */
+
+.article h2 {
+    color: #1b5e20;
+    font-size: 38px;
+    line-height: 1.3;
+    margin-bottom: 12px;
+}
+
+.article-date {
+    color: #777;
+    font-size: 15px;
+    margin-bottom: 30px;
+}
+
+@media screen and (max-width: 768px) {
+
+    .article h2 {
+        font-size: 28px;
+    }
+
+    .article-date {
+        font-size: 14px;
+    }
+
+}
+/* =====================================
+   PAGE ARTICLE - IMAGE
+===================================== */
+
+.article-image {
+    display: block;
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    margin: 0 auto 35px auto;
+    border-radius: 15px;
+    object-fit: contain;
+}
+/* =====================================
+   PAGE ARTICLE - TEXTE
+===================================== */
+
+.article-content {
+    max-width: 750px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.article-content p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 22px;
+}
+
+@media screen and (max-width: 768px) {
+    .article-content {
+        width: 100%;
+    }
+
+    .article-content p {
+        font-size: 16px;
+        line-height: 1.7;
+    }
+    }
+    
+/* =====================================
+   PAGE ARTICLE - BOUTON RETOUR
+===================================== */
+
+.article > .btn {
+    display: inline-block;
+    margin-top: 15px;
+    background: #1b5e20;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 25px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.article > .btn:hover {
+    background: #2e7d32;
+    transform: translateY(-2px);
+}
+/* =====================================
+   PAGE CONTACT - BLOCS
+===================================== */
+
+.contact > h2 {
+    color: #1b5e20;
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.contact > p {
+    max-width: 750px;
+    margin: 0 auto 40px auto;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.contact-item {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.contact-item a {
+    color: #333;
+    text-decoration: none;
+}
+
+.contact-item a:hover {
+    color: #1b5e20;
+}
+
+@media screen and (max-width: 768px) {
+
+    .contact-info {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 20px !important;
+    }
+
+    .contact-item {
+        width: 100% !important;
+        max-width: 400px !important;
+    }
+
+}
+/* =====================================
+   CONTACT - ALIGNEMENT DES BLOCS
+===================================== */
+
+.contact-info {
+    max-width: 1000px;
+    margin: 0 auto;
+    gap: 30px;
+}
+
+.contact-item {
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.contact-item h3 {
+    margin-bottom: 12px;
+}
+
+.contact-item p {
+    line-height: 1.6;
+}
+
+contact-item h3 {
+    color: #1b5e20;
+    font-size: 20px;
+}
+
+/* Adresse e-mail */
+.contact-item p a {
+    color: #555;
+    font-size: 16px;
+}
+
+/* Bouton Nous écrire */
+.contact-button {
+    font-size: 14px;
+    padding: 9px 20px;
+    margin-top: 10px;
+    letter-spacing: 0.3px;
+}
+/* =====================================
+   DIFFÉRENCIATION E-MAIL / BOUTON
+===================================== */
+
+.contact-item p a {
+    color: #555 !important;
+    font-size: 15px !important;
+    text-decoration: underline !important;
+}
+
+.contact-button {
+    display: inline-block;
+    margin-top: 15px !important;
+    padding: 10px 24px !important;
+    background: #1b5e20 !important;
+    color: #fff !important;
+    border-radius: 6px !important;
+    font-size: 14px !important;
+    font-weight: bold !important;
+    text-decoration: none !important;
+    letter-spacing: 0.5px;
+}
+
+.contact-button:hover {
+    background: #2e7d32 !important;
+}
+
+/* Alignement des boutons Contact sur PC */
+
+.contact-info {
+    align-items: stretch;
+}
+
+.contact-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-item .contact-button {
+    margin-top: auto !important;
+    align-self: center;
+}
+
+@media screen and (max-width: 768px) {
+
+    header .logo {
+        max-width: calc(100% - 55px);
+    }
+
+    header .logo h1 {
+        font-size: 16px;
+        white-space: nowrap;
+        letter-spacing: -0.4px;
+    }
+
+}
+
+/* =====================================
+   CONTACT - ESPACEMENT FINAL
+===================================== */
+
+.contact {
+    padding-top: 50px;
+    padding-bottom: 60px;
+}
+
+@media screen and (max-width: 768px) {
+    .contact {
+        padding-top: 35px;
+        padding-bottom: 40px;
+    }
+}
+@media screen and (max-width: 768px) {
+
+    /* Titre principal de l'accueil */
+    .hero h2 {
+        font-size: 30px;
+    }
+
+    /* Texte de bienvenue */
+    .hero p {
+        font-size: 16px;
+    }
+
+}
+/* =====================================
+   NOS ACTIONS - TEXTE
+===================================== */
+
+.actions .card p,
+.actions .intro-actions,
+.engagement-actions p {
+    text-align: left !important;
+}
+/* =====================================
+   ASSOCIATION - IMAGE
+===================================== */
+
+.image-presentation {
+    display: block;
+    width: 100%;
+    max-width: 750px;
+    height: auto;
+    margin: 0 auto 30px auto;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+/* =====================================
+   ASSOCIATION - TEXTE
+===================================== */
+
+.presentation > p {
+    max-width: 750px;
+    margin: 0 auto 22px auto;
+    text-align: left;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+@media screen and (max-width: 768px) {
+
+    .presentation > p {
+        font-size: 16px;
+        line-height: 1.7;
+    }
+
+}
+/* Texte de présentation aligné à gauche */
+
+.presentation > p {
+    text-align: left !important;
+    max-width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* =====================================
+   ASSOCIATION - NOS VALEURS
+===================================== */
+
+.valeurs {
+    max-width: 750px;
+    margin: 40px auto 0 auto;
+    padding: 30px;
+    border-radius: 15px;
+    background: #f7f7f7;
+}
+
+.valeurs h3 {
+    color: #1b5e20;
+    font-size: 26px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.valeurs ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.valeurs li {
+    font-size: 17px;
+    line-height: 1.6;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.valeurs li:last-child {
+    border-bottom: none;
+}
+
+@media screen and (max-width: 768px) {
+
+    .valeurs {
+        padding: 22px;
+        margin-top: 30px;
+    }
+
+    .valeurs h3 {
+        font-size: 23px;
+    }
+
+    .valeurs li {
+        font-size: 16px;
+    }
+
+}
+/* =====================================
+   ASSOCIATION - TITRE
+===================================== */
+
+.presentation > h2 {
+    color: #1b5e20;
+    font-size: 36px;
+    margin-bottom: 25px;
+}
+
+@media screen and (max-width: 768px) {
+
+    .presentation > h2 {
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+
+}
+/* =====================================
+   NOS ACTIONS - NOTRE ENGAGEMENT
+===================================== */
+
+.engagement-actions {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.engagement-actions p {
+    max-width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    line-height: 1.7;
+}
+
+@media screen and (max-width: 768px) {
+
+    .engagement-actions {
+        width: 100%;
+    }
+
+    .engagement-actions p {
+        width: 100%;
+        font-size: 16px;
+        line-height: 1.7;
+    }
+
+}
+
+/* =====================================
+   NOTRE ENGAGEMENT - LARGEUR DU BLOC
+===================================== */
+
+.engagement-actions {
+    width: 90% !important;
+    max-width: 1100px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    box-sizing: border-box;
+}
+
+.engagement-actions p {
+    max-width: none !important;
+    width: 100% !important;
+}
+
+/* =====================================
+   ACCUEIL - PRÉSENTATION
+===================================== */
+
+.accueil-presentation {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+@media screen and (max-width: 768px) {
+    .accueil-presentation {
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
